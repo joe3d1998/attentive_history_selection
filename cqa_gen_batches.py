@@ -116,7 +116,6 @@ def cqa_gen_example_aware_batches(features, example_tracker, variation_tracker, 
             assert len(batch_features) > 0
             yield batch_features, batch_example_tracker, batch_variation_tracker
             
-        print('epoch finished!')
         
 def cqa_gen_example_aware_batches_v2(features, example_tracker, variation_tracker, example_features_nums, batch_size, num_epoches, shuffle=False):
     # this is for history attention. suppose example 1 has 3 variations (e1.1, e1.2, e1.3), and each variation has two features
