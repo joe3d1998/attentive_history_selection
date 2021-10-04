@@ -13,6 +13,7 @@ import six
 import tensorflow as tf
 from copy import deepcopy
 import numpy as np
+from tqdm import tqdm
 
 from cqa_flags import FLAGS
 
@@ -1050,8 +1051,8 @@ def convert_examples_to_variations_and_then_features(examples, tokenizer, max_se
     variation_tracker = []
     # matching_signals_dict = {}
     unique_id = 1000000000
-    num_files_train = 500
-    num_files_val = 180
+    num_files_train = 4
+    num_files_val = 1
     features_num_train = 510320
     features_num_val = 81518
     each_file_features_train = int(features_num_train // num_files_train)
